@@ -1,0 +1,19 @@
+apt install git
+git config --global user.name "username"
+git config --global user.email "email-id"
+mkdir /script
+git init /script/
+cd /script/
+touch hello-git-world
+git add hello-git-world
+git commit -m "Testing-message"
+git remote add origin https://git-repository-link
+git push origin master
+git pull https://git-repositroy-link
+ls
+git config --global user.name "usernmae"
+git remote add origin https://github-repository-name
+git push origin master
+git pull --rebase origin master
+git push origin master
+
