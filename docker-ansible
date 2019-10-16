@@ -1,0 +1,20 @@
+---
+- name: nginx container
+  docker:
+    name: nginx
+    image: nginx
+    state: reloaded
+    ports:
+    - "::"
+    cap_drop: all
+    cap_add:
+      - setgid
+      - setuid
+    pull: always
+    restart_policy: on-failure
+    restart_policy_retry: 3
+    volumes:
+      - /mnt:/etc/nginx/nginx.conf:ro
+  tags:
+    - docker_container
+    - nginx
